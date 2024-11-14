@@ -1,0 +1,323 @@
+Nav HTML:
+
+<nav className='nav-wrapper'>
+        <div className="nav-wrapper blue darken-2">
+          <div className="container nav-left">
+            <a href="/" className="brand-logo">
+              <img 
+                src="https://img.freepik.com/vector-gratis/plantilla-logotipo-tienda-papeleria_23-2149852417.jpg?semt=ais_hybrid" 
+                alt="Logo" 
+                className="logo" 
+              />
+            </a>
+            <ul className="left">
+              <li><a href="/" className="btn-productos">PRODUCTOS</a></li>
+              <li><a href="/" className="btn-promociones">PROMOCIONES</a></li>
+              <li><a href="/" className="link-quienes">Quienes somos</a></li>
+              <li className="Envios">¡Aprovecha incontables envíos gratis!</li>
+            </ul>
+            <div className="search-container">
+  <div className={`search-bar ${searchActive ? "expanded" : ""}`}>
+    <input
+      type="text"
+      placeholder="Buscar productos..."
+      className={`search-input ${searchActive ? "active" : ""}`}
+    />
+    <img
+      src="https://cdn-icons-png.flaticon.com/512/45/45895.png"
+      alt="Buscar"
+      className="search-icon"
+      onClick={() => setSearchActive(!searchActive)}
+    />
+  </div>
+  <div className="cart-icon">
+    <a href="/">
+      <img
+        src="https://w7.pngwing.com/pngs/225/984/png-transparent-computer-icons-shopping-cart-encapsulated-postscript-shopping-cart-angle-black-shopping.png"
+        alt="Carrito de compras"
+      />
+    </a>
+  </div>
+</div>
+
+
+Nav css:
+
+.nav-wrapper {
+  background-color: #1565c0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%; /* Asegura que ocupe todo el ancho de la pantalla */
+
+  height: 50px; /* Ajusta según prefieras */
+}
+
+
+/* Alineación para el logo */
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .nav-wrapper {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .nav-left {
+    margin-bottom: 10px; /* Espacio adicional entre logo y menú */
+  }
+
+
+}
+
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+}
+
+
+  .logo {
+    width: 70px; /* Ajuste de tamaño */
+    margin-top: 20px;
+    height: 40px;
+    margin-right: 10px;
+
+  }
+
+
+
+/* Estilos para centrar los elementos del menú */
+ul.left {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul.left li {
+  margin: 0 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+
+
+
+/* Estilos de la barra de búsqueda */
+/* Contenedor de la barra de búsqueda y carrito */
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Empuja el contenedor al extremo derecho */
+  
+}
+
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #7ca4d1; /* Color del fondo igual al del nav */
+  border-radius: 20px;
+  padding: 5px 10px;
+  overflow: hidden; /* Ocultar el input inicialmente */
+  width: 40px; /* Solo el icono de búsqueda es visible al principio */
+  transition: width 0.3s ease; /* Animación de expansión */
+}
+
+.search-input {
+  display: none; /* Ocultar el input al principio */
+  border: none;
+  outline: none;
+  padding: 5px;
+  font-size: 14px;
+  background-color: #7ca4d1; /* Mismo color que el fondo */
+  
+  width: 100px; /* Tamaño del recuadro cuando se expanda */
+  transition: width 0.3s ease;
+}
+
+.search-icon {
+  width: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  height: 30px;
+  cursor: pointer;
+}
+
+.search-bar.expanded {
+  width: 300px; 
+}
+
+.search-input.active {
+  display: block;
+}
+
+.search-bar.expanded .search-icon {
+  transform: rotate(90deg); 
+}
+
+
+.cart-icon {
+  margin-left: 5px;
+  margin-top: 20px;
+}
+
+.cart-icon img {
+  width: 70px;
+  height: 30px;
+  padding-left: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+Footer HTML: 
+
+   <footer class="page-footer blue darken-2">
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m6 l3">
+        <h5 class="white-text">Compañía</h5>
+        <ul>
+          <li><a href="#!" class="white-text">Sobre nosotros</a></li>
+          <li><a href="#!" class="white-text">Carreras</a></li>
+          <li><a href="#!" class="white-text">Blog</a></li>
+          <li><a href="#!" class="white-text">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="col s12 m6 l3">
+        <h5 class="white-text">Ayuda</h5>
+        <ul>
+          <li><a href="#!" class="white-text">Preguntas frecuentes</a></li>
+          <li><a href="#!" class="white-text">Soporte</a></li>
+          <li><a href="#!" class="white-text">Política de privacidad</a></li>
+          <li><a href="#!" class="white-text">Términos y condiciones</a></li>
+        </ul>
+      </div>
+
+      <div class="col s12 m6 l3">
+        <h5 class="white-text">Tienda</h5>
+        <ul>
+          <li><a href="#!" class="white-text">Productos</a></li>
+          <li><a href="#!" class="white-text">Ofertas</a></li>
+          <li><a href="#!" class="white-text">Novedades</a></li>
+          <li><a href="#!" class="white-text">Política de devoluciones</a></li>
+        </ul>
+      </div>
+
+      <div class="col s12 m6 l3">
+        <h5 class="white-text">Síguenos</h5>
+        <ul>
+          <li><a href="#" class="white-text"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+          <li><a href="#" class="white-text"><i class="fab fa-twitter"></i> Twitter</a></li>
+          <li><a href="#" class="white-text"><i class="fab fa-instagram"></i> Instagram</a></li>
+          <li><a href="#" class="white-text"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-info">
+    <div class="container">
+      © 2024 Tu Tienda Online. Todos los derechos reservados.
+    </div>
+  </div>
+</footer>
+
+
+
+
+Footer css:
+
+
+.footer {
+  background-color: #1565c0; /* Mismo color que el nav */
+  color: white; /* Texto blanco para contraste */
+  padding: 60px 0; /* Más espacio superior e inferior */
+  text-align: center; /* Centrar el contenido */
+  width: 100%;
+  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave al final del footer */
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Cuatro columnas iguales */
+  gap: 40px; /* Más espacio entre columnas */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-column h4 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #f1f1f1; /* Color más suave para los títulos */
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin: 12px 0;
+}
+
+.footer-column a {
+  color: #f1f1f1;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer-column a:hover {
+  color: #ffeb3b; /* Color de resaltado amarillo */
+  transform: translateX(5px); /* Desplazamiento a la derecha para un efecto */
+}
+
+.footer-column a:focus {
+  outline: none;
+  color: #ffeb3b; /* Resaltado al hacer clic */
+}
+
+.footer-info {
+  margin-top: 40px;
+  font-size: 14px;
+  color: #f1f1f1;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.footer-info p {
+  margin: 0;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr; /* Poner todas las columnas en una sola fila */
+  }
+
+  .footer-column h4 {
+    font-size: 18px; /* Reducir tamaño de los encabezados en móviles */
+  }
+}
+
