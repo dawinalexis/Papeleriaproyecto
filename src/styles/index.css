@@ -37,7 +37,6 @@
   border-radius: 10px;
 }
 
-/* Estilos para el contenedor del carrusel */
 .carousel-container {
   width: 100%;
   position: relative;
@@ -97,6 +96,15 @@
   min-height: auto !important;
 }
 
+.button-container {
+  position: absolute;
+  top: 85%; /* Ajusta para centrar verticalmente */
+  left: 50%; /* Ajusta para centrar horizontalmente */
+  transform: translate(-50%, -50%); /* Centra el botón perfectamente */
+  z-index: 10; /* Asegura que el botón esté encima del carrusel */
+}
+
+
 /* Ajustes para el contenedor principal */
 .container {
   width: 100% !important;
@@ -115,8 +123,8 @@
   display: flex;
   overflow-x: scroll;
   width: 90%; /* El scroll horizontal ocupa el 100% del ancho de su contenedor */
-  height: 87%;
-  margin-top: 40px; /* Espacio superior para separar la segunda columna de los productos */
+  height: 70%;
+  margin-top: 100px; /* Espacio superior para separar la segunda columna de los productos */
 }
 
 .horizontal-scroll-item {
@@ -131,7 +139,7 @@
 .horizontal-scroll img {
   width: 150px;
   height: 150px;
-  margin: 10px 20px;
+ 
 }
 
 .sold-amount {
@@ -172,148 +180,6 @@
 
 }
 /* Elimina el fondo rosado del nav */
-body {
-  margin: 0;
-  padding: 0;
-  background-color: white; /* Asegúrate de que el fondo del body sea blanco o el color que prefieras */
-}
-
-.nav-wrapper {
-  background-color: #1565c0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  width: 100%; /* Asegura que ocupe todo el ancho de la pantalla */
-
-  height: 50px; /* Ajusta según prefieras */
-}
-
-
-/* Alineación para el logo */
-.nav-left {
-  display: flex;
-  align-items: center;
-}
-@media (max-width: 768px) {
-  .nav-wrapper {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .nav-left {
-    margin-bottom: 10px; /* Espacio adicional entre logo y menú */
-  }
-
-
-}
-
-
-.brand-logo {
-  display: flex;
-  align-items: center;
-  margin-right: 40px;
-}
-
-
-  .logo {
-    width: 70px; /* Ajuste de tamaño */
-    margin-top: 20px;
-    height: 40px;
-    margin-right: 10px;
-
-  }
-
-
-
-/* Estilos para centrar los elementos del menú */
-ul.left {
-  display: flex;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-ul.left li {
-  margin: 0 15px;
-  font-size: 18px;
-  font-weight: bold;
-  color: #fff;
-}
-
-
-
-/* Estilos de la barra de búsqueda */
-/* Contenedor de la barra de búsqueda y carrito */
-.search-container {
-  display: flex;
-  align-items: center;
-  margin-left: auto; /* Empuja el contenedor al extremo derecho */
-  
-}
-
-
-.search-bar {
-  display: flex;
-  align-items: center;
-  background-color: #7ca4d1; /* Color del fondo igual al del nav */
-  border-radius: 20px;
-  padding: 5px 10px;
-  overflow: hidden; /* Ocultar el input inicialmente */
-  width: 40px; /* Solo el icono de búsqueda es visible al principio */
-  transition: width 0.3s ease; /* Animación de expansión */
-}
-
-.search-input {
-  display: none; /* Ocultar el input al principio */
-  border: none;
-  outline: none;
-  padding: 5px;
-  font-size: 14px;
-  background-color: #7ca4d1; /* Mismo color que el fondo */
-  
-  width: 100px; /* Tamaño del recuadro cuando se expanda */
-  transition: width 0.3s ease;
-}
-
-.search-icon {
-  width: 20px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  height: 30px;
-  cursor: pointer;
-}
-
-.search-bar.expanded {
-  width: 300px; 
-}
-
-.search-input.active {
-  display: block;
-}
-
-.search-bar.expanded .search-icon {
-  transform: rotate(90deg); 
-}
-
-
-.cart-icon {
-  margin-left: 5px;
-  margin-top: 20px;
-}
-
-.cart-icon img {
-  width: 70px;
-  height: 30px;
-  padding-left: 20px;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-
 
 
 
@@ -325,7 +191,7 @@ ul.left li {
   gap: 20px; /* Espacio entre las columnas */
   border: 2px solid #ddd; 
   align-items: start; 
-  width: 50%;
+  width: 70%;
 }
 
 .title-section {
@@ -333,17 +199,18 @@ ul.left li {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-left: 60px;
+  margin-left: 50px;
 }
 
 .title-section h2 {
-  margin-bottom: 10px; /* Espacio entre el título y la imagen */
+  margin-bottom: 5px; /* Espacio entre el título y la imagen */
 }
 
 .title-image {
-  width: 80%; /* Ajusta el tamaño según necesites */
+  width: 60%; /* Ajusta el tamaño según necesites */
   height: auto; /* Mantén la proporción de la imagen */
-  margin-bottom: 20px; /* Espacio entre la imagen y el contenido de productos */
+  margin-bottom: 15px; /* Espacio entre la imagen y el contenido de productos */
+  margin-left: 70px;
 }
 
 .rainbow-text {
@@ -434,59 +301,6 @@ ul.left li {
   line-height: 5;
 }
 
-/* Botón de productos */
-.btn-productos {
-  background-color: darkblue;
-  margin-left: 220px;
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
-
-}
-
-.btn-productos:hover {
-  background-color: rgb(20, 20, 160);
-}
-
-/* Botón de promociones */
-.btn-promociones {
-  background-color: rgb(202, 4, 4);
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
-}
-
-.btn-promociones:hover {
-  background-color: rgb(250, 60, 60);
-}
-
-/* Aplica la clase base a ambos */
-.btn-productos, .btn-promociones {
-  @extend .btn-base;
-}
-
-/* Estilos para el enlace "Quienes somos" */
-.link-quienes {
-  color: white; /* Color blanco para el texto */
-  text-decoration: underline; /* Subraya el texto */
-  margin-left: 5px; /* Espacio a la izquierda para separar del resto de los botones */
-  font-size: 14px; /* Ajusta el tamaño del texto si es necesario */
-  width: 130px;
-  
-
-}
-
-.link-quienes:hover {
-  color: lightblue; /* Cambia a azul claro cuando el cursor esté encima */
-}
-
-
-.button-container {
-  position: absolute;
-  top: 85%; /* Ajusta para centrar verticalmente */
-  left: 50%; /* Ajusta para centrar horizontalmente */
-  transform: translate(-50%, -50%); /* Centra el botón perfectamente */
-  z-index: 10; /* Asegura que el botón esté encima del carrusel */
-}
-
 
 /* Estilos generales de la tarjeta */
 /* Ajustar el margen entre las tarjetas */
@@ -558,86 +372,3 @@ h2, .card-title, .price {
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
-
-
-
-
-.footer {
-  background-color: #1565c0; /* Mismo color que el nav */
-  color: white; /* Texto blanco para contraste */
-  padding: 60px 0; /* Más espacio superior e inferior */
-  text-align: center; /* Centrar el contenido */
-  width: 100%;
-  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave al final del footer */
-}
-
-.footer-content {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Cuatro columnas iguales */
-  gap: 40px; /* Más espacio entre columnas */
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.footer-column h4 {
-  font-size: 20px;
-  margin-bottom: 15px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #f1f1f1; /* Color más suave para los títulos */
-}
-
-.footer-column ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-column li {
-  margin: 12px 0;
-}
-
-.footer-column a {
-  color: #f1f1f1;
-  text-decoration: none;
-  font-size: 14px;
-  transition: color 0.3s, transform 0.3s;
-}
-
-.footer-column a:hover {
-  color: #ffeb3b; /* Color de resaltado amarillo */
-  transform: translateX(5px); /* Desplazamiento a la derecha para un efecto */
-}
-
-.footer-column a:focus {
-  outline: none;
-  color: #ffeb3b; /* Resaltado al hacer clic */
-}
-
-.footer-info {
-  margin-top: 40px;
-  font-size: 14px;
-  color: #f1f1f1;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-.footer-info p {
-  margin: 0;
-  letter-spacing: 1px;
-  font-weight: 300;
-}
-
-@media (max-width: 768px) {
-  .footer-content {
-    grid-template-columns: 1fr; /* Poner todas las columnas en una sola fila */
-  }
-
-  .footer-column h4 {
-    font-size: 18px; /* Reducir tamaño de los encabezados en móviles */
-  }
-}
-

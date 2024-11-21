@@ -1,0 +1,197 @@
+
+.nav-wrapper {
+  background-color: #1565c0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+  height: 50px;
+  z-index: 10; /* Menor que el de categories-menu */
+}
+
+  
+  
+  /* Alineación para el logo */
+  .nav-left {
+    display: flex;
+    align-items: center;
+  }
+  @media (max-width: 768px) {
+    .nav-wrapper {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .nav-left {
+      margin-bottom: 10px; /* Espacio adicional entre logo y menú */
+    }
+  
+  
+  }
+  
+  
+  .brand-logo {
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+  }
+  
+  
+    .logo {
+      width: 70px; /* Ajuste de tamaño */
+      margin-top: 20px;
+      height: 40px;
+      margin-right: 10px;
+  
+    }
+  
+  
+  
+  /* Estilos para centrar los elementos del menú */
+  ul.left {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  ul.left li {
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  
+  
+  /* Estilos de la barra de búsqueda */
+  /* Contenedor de la barra de búsqueda y carrito */
+  .search-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Empuja el contenedor al extremo derecho */
+    
+  }
+
+
+
+  
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #7ca4d1; /* Color del fondo igual al del nav */
+    border-radius: 20px;
+    padding: 5px 10px;
+    overflow: hidden; /* Ocultar el input inicialmente */
+    width: 40px; /* Solo el icono de búsqueda es visible al principio */
+    transition: width 0.3s ease; /* Animación de expansión */
+  }
+  
+  .search-input {
+    display: none; /* Ocultar el input al principio */
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 14px;
+    background-color: #7ca4d1; /* Mismo color que el fondo */
+    
+    width: 100px; /* Tamaño del recuadro cuando se expanda */
+    transition: width 0.3s ease;
+  }
+  
+  .search-icon {
+    width: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    height: 30px;
+    cursor: pointer;
+  }
+  
+  .search-bar.expanded {
+    width: 300px; 
+  }
+  
+  .search-input.active {
+    display: block;
+  }
+  
+  .search-bar.expanded .search-icon {
+    transform: rotate(90deg); 
+  }
+  
+  
+  .cart-icon {
+    margin-left: 5px;
+    margin-top: 20px;
+  }
+  
+  .cart-icon img {
+    width: 70px;
+    height: 30px;
+    padding-left: 20px;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+
+
+  /* Clase base para botones */
+.btn-base {
+    color: white;
+    padding: 5px 20px;
+    font-size: 14px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    line-height: 5;
+  }
+  
+  /* Botón de productos */
+  .btn-productos {
+    background-color: darkblue;
+    margin-left: 220px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    height: 50px;
+  
+  }
+  
+  .btn-productos:hover {
+    background-color: rgb(20, 20, 160);
+  }
+  
+  /* Botón de promociones */
+  .btn-promociones {
+    background-color: rgb(202, 4, 4);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    height: 50px;
+  }
+  
+  .btn-promociones:hover {
+    background-color: rgb(250, 60, 60);
+  }
+  
+
+  
+  /* Estilos para el enlace "Quienes somos" */
+  .link-quienes {
+    color: white; /* Color blanco para el texto */
+    text-decoration: underline; /* Subraya el texto */
+    margin-left: 5px; /* Espacio a la izquierda para separar del resto de los botones */
+    font-size: 14px; /* Ajusta el tamaño del texto si es necesario */
+    width: 130px;
+    
+  
+  }
+  
+  .link-quienes:hover {
+    color: lightblue; /* Cambia a azul claro cuando el cursor esté encima */
+  }
+  

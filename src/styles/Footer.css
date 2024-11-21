@@ -1,0 +1,78 @@
+
+.footer {
+    background-color: #1565c0; /* Mismo color que el nav */
+    color: white; /* Texto blanco para contraste */
+    padding: 60px 0; /* Más espacio superior e inferior */
+    text-align: center; /* Centrar el contenido */
+    width: 100%;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave al final del footer */
+  }
+  
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Cuatro columnas iguales */
+    gap: 40px; /* Más espacio entre columnas */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-column h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #f1f1f1; /* Color más suave para los títulos */
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-column li {
+    margin: 12px 0;
+  }
+  
+  .footer-column a {
+    color: #f1f1f1;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s, transform 0.3s;
+  }
+  
+  .footer-column a:hover {
+    color: #ffeb3b; /* Color de resaltado amarillo */
+    transform: translateX(5px); /* Desplazamiento a la derecha para un efecto */
+  }
+  
+  .footer-column a:focus {
+    outline: none;
+    color: #ffeb3b; /* Resaltado al hacer clic */
+  }
+  
+  .footer-info {
+    margin-top: 40px;
+    font-size: 14px;
+    color: #f1f1f1;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  .footer-info p {
+    margin: 0;
+    letter-spacing: 1px;
+    font-weight: 300;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-content {
+      grid-template-columns: 1fr; /* Poner todas las columnas en una sola fila */
+    }
+  
+    .footer-column h4 {
+      font-size: 18px; /* Reducir tamaño de los encabezados en móviles */
+    }
+  }

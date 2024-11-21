@@ -1,0 +1,216 @@
+
+.carousel-container .carousel-small {
+  width: 100% !important;
+  height: 70vh; /* Ajusta la altura al 50% del viewport height */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  margin-bottom: 2rem;
+  display: block; /* Asegúrate de que esté en bloque para que funcione el margin auto */
+}
+
+.carousel-small {
+    height: 50vh !important; /* Asegúrate de que la altura esté bien definida */
+    width: 50% !important;
+    margin: 0 auto; /* Asegúrate de que esté centrado si es necesario */
+    display: block; /* O usa flex para alineación */
+  }
+  
+
+.carousel-small .carousel-item {
+    height: 100% !important;
+    width: 100% !important;
+
+}
+.carousel-small .carousel-item img {
+    height: 100%; /* Ajusta la imagen para que ocupe el 100% de la altura */
+    width: 70%;  /* Ajusta la imagen para que ocupe el 100% del ancho */
+    object-fit: cover; /* Mantén la relación de aspecto */
+    border-radius: 15px;
+      margin: 0 auto; /* Asegúrate de que esté centrado si es necesario */
+    display: block; /* O usa flex para alineación */
+  }
+  
+
+header{
+    background-color: lightblue;
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #e1ecf2;
+    overflow-x: hidden; /* Evita que se desborde horizontalmente */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+}
+
+.container-items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    border: 3px solid brown;
+    border-radius: 5px;
+    max-width: 1000px;
+    width: 80%;
+    margin: auto;
+    background-color: lightblue;
+    margin-top: 20px;
+}
+
+.item{
+    border-radius: 10px;
+}
+
+.item:hover{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+}
+
+
+.item img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+
+}
+
+
+
+h1 {
+    text-align: center;
+}
+
+
+  .card-content{
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en una columna */
+    align-items: center;    /* Centra horizontalmente */
+    text-align: justify;
+    gap: 5px;
+  }
+  
+  .price {
+    font-size: 30px;
+    font-weight: bold;
+    color: #2e7d32;
+  }
+  
+  
+  #button-product{
+    display: flex;  
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 40px;
+  }
+  
+  .quantity-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espaciado entre botones e input */
+  }
+  
+  .quantity-field {
+    width: 60px; /* Tamaño del campo */
+    text-align: center; /* Centra el texto */
+    font-size: 16px; /* Ajusta el tamaño de la fuente */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .quantity-field::-webkit-inner-spin-button,
+  .quantity-field::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  .quantity-input .btn-decrement,
+  .quantity-input .btn-increment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+  }
+  
+  .quantity-field[type="number"] {
+    -moz-appearance: textfield;
+  }
+  
+  .general {
+    display: flex;
+}
+
+.general-1 {
+    margin-top: 20px;
+    width: 50%;
+    padding: 100px 250px 100px 100px;
+    background-color:  lightblue;
+}
+
+.general-1 p {
+    text-align: justify;
+}
+.general-2 {
+    background-image: url('/public/image/Captura de pantalla 2024-11-21 003615.png');
+    background-position: center center ;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50%;
+}
+
+.general-3 {
+    background-image: url('/public/image/Captura de pantalla 2024-11-21 003553.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50%;
+    
+}
+
+.general-4 {
+    background-image: url('/public/image/Captura de pantalla 2024-11-21 003522.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50%;
+    
+}
+.general-5 {
+    background-image: url('/public/image/Captura de pantalla 2024-11-21 003601.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50%;
+    
+}
+.btn-1 {
+    display: inline-block;
+    padding: 11px 35px;
+    background-color:#CE967B ;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.btn-1:hover {
+    background-color:  #CE967B;
+}
+
+h2 { 
+    font-size: 55px;
+    line-height: 70px;
+    color: black;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
